@@ -76,4 +76,62 @@ document.addEventListener("DOMContentLoaded", function () {
     colorAppearCta.reverse();
     bgAppearCta.reverse();
   });
+
+  //BENTO
+
+  const elegant = document.querySelector(".bento__box__elegant");
+
+  let elegantAppearImg = gsap.to(".bento__box__elegant img", {
+    duration: 0.5,
+    scale: 1.05,
+    xPercent: 5,
+    ease: "power1.inOut",
+    paused: true,
+  });
+
+  let elegantAppearBg = gsap.to(".bento__box__elegant__bg", {
+    duration: 0.5,
+    autoAlpha: 1,
+    ease: "power1.inOut",
+    paused: true,
+  });
+
+  elegant.addEventListener("mouseenter", function () {
+    elegantAppearImg.play();
+    elegantAppearBg.play();
+  });
+
+  elegant.addEventListener("mouseleave", function () {
+    elegantAppearImg.reverse();
+    elegantAppearBg.reverse();
+  });
+
+  const personnalisable = document.querySelector(
+    ".bento__box__personnalisable"
+  );
+
+  let personnalisableAppearImg = gsap.to(".bento__box__personnalisable img", {
+    duration: 0.4,
+    scale: 1.05,
+    xPercent: 3,
+    ease: "power1.inOut",
+    paused: true,
+  });
+
+  let personnalisableAppearBg = gsap.to(".bento__box__personnalisable__bg", {
+    duration: 0.3,
+    autoAlpha: 1,
+    ease: "power1.inOut",
+    paused: true,
+  });
+
+  personnalisable.addEventListener("mouseenter", function () {
+    personnalisableAppearImg.play();
+    personnalisableAppearBg.play();
+  });
+
+  personnalisable.addEventListener("mouseleave", function () {
+    personnalisableAppearImg.reverse();
+    personnalisableAppearBg.reverse();
+  });
 });
