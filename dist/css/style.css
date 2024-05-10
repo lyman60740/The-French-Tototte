@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-Light.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-LightItalic.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-MediumItalic.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: italic;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-Thin.otf") format("opentype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gustavo";
+  src: url("/src/fonts/gustavo/Gustavo_trial-ThinItalic.otf") format("opentype");
+  font-weight: 100; /* Thin */
+  font-style: italic;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-BoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-Light.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-LightItalic.otf") format("opentype");
+  font-weight: 300; /* Light */
+  font-style: italic;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-MediumItalic.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: italic;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-Thin.otf") format("opentype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tartuffo";
+  src: url("/src/fonts/tartuffo/Tartuffo_Trial-ThinItalic.otf") format("opentype");
+  font-weight: 100; /* Thin */
+  font-style: italic;
+}
+/* General CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  min-height: 500vh;
+  position: relative;
+  font-family: "Gustavo", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #5D4043;
+}
+
+.bg-lines {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 70vh 240px 0 240px;
+  box-sizing: border-box;
+  z-index: 5;
+}
+.bg-lines div {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #3E4451;
+  mix-blend-mode: difference;
+  opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 10%, rgb(0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.1) 100%);
+}
+.bg-lines div:last-child {
+  border-right: 1px solid #3E4451;
+}
+
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 38.5px 240px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navBar__logo {
+  position: relative;
+  width: max-content;
+  overflow: hidden;
+  -webkit-mask-image: url(/src/assets/logo.svg);
+  mask-image: url(/src/assets/logo.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  cursor: pointer;
+}
+.navBar__logo .colors {
+  transform: translate(-100%, 50%) rotate(143deg);
+  left: 0;
+  top: 8px;
+}
+.navBar__cta {
+  width: max-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.navBar__cta a {
+  color: #FAF6F3;
+  z-index: 4;
+  position: relative;
+  font-size: 14px;
+  transform: translateY(-2px);
+}
+.navBar__cta__bg1 {
+  background: #5D4043;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.navBar__cta__bg2 {
+  background: #291618;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+.navBar__cta .colors {
+  transform: translate(-130%, 0%) rotate(143deg);
+  height: 500% !important;
+  z-index: 3;
+}
+
+.colors {
+  position: absolute;
+  height: 100%;
+  width: 115%;
+  display: flex;
+  z-index: 50;
+}
+.colors div {
+  height: 150%;
+}
+.colors div:nth-child(1) {
+  background-color: #C40018;
+  width: 32%;
+}
+.colors div:nth-child(2) {
+  background-color: #FF5A5A;
+  width: 20%;
+}
+.colors div:nth-child(3) {
+  background-color: #0066FF;
+  width: 16%;
+}
+.colors div:nth-child(4) {
+  background-color: #0007AF;
+  width: 32%;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+header video {
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+}
+header .maskHeader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 102svh;
+  z-index: 1;
+  width: 100%;
+  background-color: white; /* Couleur de fond pour voir l'effet du masque */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgb(0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 50%, rgb(0, 0, 0) 100%);
+}
+header .header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5svh;
+}
+header .header-content__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-top: 38.5px;
+}
+header .header-content__title div {
+  font-size: 8px;
+  margin-left: 2px;
+  margin-bottom: 1svh;
+}
+header .header-content h1 {
+  font-family: "Tartuffo", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+header .header-content p {
+  font-family: "Tartuffo", sans-serif;
+  font-size: 80px;
+  margin-top: 3svh;
+  text-align: center;
+}
+header .header-content span {
+  margin-top: 4svh;
+}
+
+.container {
+  height: 300vh;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
