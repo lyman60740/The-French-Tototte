@@ -302,7 +302,7 @@ header .maskHeader {
 }
 header .header-content {
   position: relative;
-  z-index: 2;
+  z-index: 99;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -349,7 +349,6 @@ header .header-content__line {
 }
 
 .bento {
-  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -357,6 +356,19 @@ header .header-content__line {
 .bento__box {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1000px;
+}
+.bento__box h2 {
+  font-family: "Tartuffo", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #5D4043;
+  margin-bottom: 16px;
+}
+.bento__box p {
+  color: #816A6C;
+  line-height: 150%;
+  font-size: 14px;
 }
 .bento__box__elegant {
   position: relative;
@@ -387,18 +399,10 @@ header .header-content__line {
   opacity: 0;
 }
 .bento__box__elegant h2 {
-  font-family: "Tartuffo", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  color: #5D4043;
-  margin-bottom: 16px;
   position: relative;
   z-index: 2;
 }
 .bento__box__elegant p {
-  color: #816A6C;
-  line-height: 150%;
-  font-size: 14px;
   position: relative;
   z-index: 2;
 }
@@ -415,13 +419,18 @@ header .header-content__line {
   border-radius: 8px;
   background: white;
   overflow: hidden;
+  margin-bottom: 16px;
+}
+.bento__box__personnalisable:hover img {
+  filter: brightness(0.95);
 }
 .bento__box__personnalisable img {
   position: absolute;
   top: 50%;
   left: -23%;
   height: 150%;
-  transform: translateY(-50%);
+  transform: translateY(-44%);
+  transition: filter 0.4s ease-in-out;
 }
 .bento__box__personnalisable__bg {
   height: 100%;
@@ -433,22 +442,123 @@ header .header-content__line {
   opacity: 0;
 }
 .bento__box__personnalisable h2 {
-  font-family: "Tartuffo", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  color: #5D4043;
-  margin-bottom: 16px;
   position: relative;
   z-index: 2;
   width: 60%;
 }
 .bento__box__personnalisable p {
-  color: #816A6C;
-  line-height: 150%;
-  font-size: 14px;
   position: relative;
   z-index: 2;
   width: 60%;
+}
+.bento__box__made {
+  width: calc(50% - 16px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  padding: 0 32px 32px 32px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 8px;
+}
+.bento__box__made img {
+  margin-bottom: 50px;
+  width: 100%;
+}
+.bento__box__innovante {
+  width: calc(50% - 16px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 32px 32px 0 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: white;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+.bento__box__innovante img {
+  position: absolute;
+  top: 43%;
+  right: -41%;
+}
+.bento__box__innovante__bg {
+  height: 200%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background: #EBE0D8;
+  filter: blur(50px);
+}
+.bento__box__savoureuse {
+  width: calc(70% - 20px);
+  height: 298px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 32px 0 0 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #EFF2FD;
+  border-radius: 8px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+.bento__box__savoureuse img {
+  position: absolute;
+  top: -25%;
+  right: -70%;
+}
+.bento__box__savoureuse h2 {
+  max-width: 40%;
+}
+.bento__box__savoureuse p {
+  max-width: 40%;
+}
+.bento__box__hebergement {
+  width: calc(30% - 16px);
+  height: 298px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  padding: 32px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #EBE0D8;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.bento__box__hebergement img {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+.bento__box__hebergement__bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: -1;
+}
+
+.largeHW {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 16px;
+}
+
+.double {
+  display: flex;
+  height: 50%;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
