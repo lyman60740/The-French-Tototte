@@ -364,11 +364,15 @@ header .header-content__line {
   font-weight: 400;
   color: #5D4043;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
 }
 .bento__box p {
   color: #816A6C;
   line-height: 150%;
   font-size: 14px;
+  position: relative;
+  z-index: 2;
 }
 .bento__box__elegant {
   position: relative;
@@ -397,14 +401,6 @@ header .header-content__line {
   left: 0;
   background: #EFF1FD;
   opacity: 0;
-}
-.bento__box__elegant h2 {
-  position: relative;
-  z-index: 2;
-}
-.bento__box__elegant p {
-  position: relative;
-  z-index: 2;
 }
 .bento__box__personnalisable {
   position: relative;
@@ -442,13 +438,9 @@ header .header-content__line {
   opacity: 0;
 }
 .bento__box__personnalisable h2 {
-  position: relative;
-  z-index: 2;
   width: 60%;
 }
 .bento__box__personnalisable p {
-  position: relative;
-  z-index: 2;
   width: 60%;
 }
 .bento__box__made {
@@ -463,9 +455,24 @@ header .header-content__line {
   background: white;
   border-radius: 8px;
 }
+.bento__box__made__bg {
+  background-image: url("/src/assets/frBg.png");
+  background-size: 400%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.3;
+}
 .bento__box__made img {
   margin-bottom: 50px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 .bento__box__innovante {
   width: calc(50% - 16px);
@@ -514,10 +521,10 @@ header .header-content__line {
   right: -70%;
 }
 .bento__box__savoureuse h2 {
-  max-width: 40%;
+  max-width: 30%;
 }
 .bento__box__savoureuse p {
-  max-width: 40%;
+  max-width: 30%;
 }
 .bento__box__hebergement {
   width: calc(30% - 16px);
@@ -533,10 +540,20 @@ header .header-content__line {
   border-radius: 8px;
   margin-top: 16px;
 }
-.bento__box__hebergement img {
+.bento__box__hebergement__img {
   position: absolute;
   top: 32px;
   left: 32px;
+  transform-origin: top;
+  height: 6px;
+  width: 24px;
+  overflow: hidden;
+}
+.bento__box__hebergement__img div {
+  height: 80px;
+  width: 24px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%), url("/src/assets/france.png");
+  background-size: contain;
 }
 .bento__box__hebergement__bg {
   height: 100%;
@@ -545,7 +562,7 @@ header .header-content__line {
   top: 0;
   left: 0;
   background: white;
-  z-index: -1;
+  opacity: 0;
 }
 
 .largeHW {
@@ -559,6 +576,90 @@ header .header-content__line {
   display: flex;
   height: 50%;
   max-width: 100%;
+}
+
+.plug {
+  width: 100%;
+  background: linear-gradient(to bottom, #D4C2B8 0%, rgba(212, 194, 184, 0) 40%, rgba(212, 194, 184, 0) 100%);
+  margin-top: 70svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plug__video {
+  position: absolute;
+  top: -58svh;
+  width: 50vw;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  z-index: 1;
+}
+.plug__video img {
+  width: 100%;
+  position: relative;
+}
+.plug__radial {
+  position: absolute;
+  top: -52svh;
+  width: 50vw;
+  height: 50vh;
+  z-index: 2;
+  background: linear-gradient(to right, #FAF6F3 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 74%, #FAF6F3 100%);
+}
+.plug__content {
+  margin-top: 143px;
+  display: flex;
+  flex-direction: column;
+  max-width: 40vw;
+}
+.plug__content h2 {
+  font-family: "Tartuffo", sans-serif;
+  color: #30171B;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.plug__content__txt {
+  display: flex;
+  justify-content: space-between;
+}
+.plug__content__txt p {
+  color: #816A6C;
+  line-height: 150%;
+  font-size: 15px;
+  width: 46%;
+  box-sizing: border-box;
+}
+.plug__content__txt p b {
+  color: #30171B;
+}
+.plug__discover {
+  font-size: 15px;
+  color: #5D4043;
+  margin-top: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.plug__discover span {
+  cursor: pointer;
+}
+.plug__discover__underline {
+  background: #5D4043;
+  height: 1px;
+  width: 70%;
+  position: absolute;
+  top: 30px;
+  transform: scaleX(0);
+}
+.plug__discover__line {
+  height: 30vh;
+  width: 1px;
+  background: linear-gradient(to top, rgba(183, 140, 145, 0) 0%, #5D4043 100%);
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
