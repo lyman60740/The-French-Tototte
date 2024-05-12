@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       start: "center bottom", // Déclenche l'animation lorsque le haut de l'élément atteint 10% du haut de la fenêtre
       end: "center center", // Vous pouvez ajuster ceci en fonction de la durée de l'effet que vous désirez
       toggleActions: "play none none reverse",
-      markers: true,
+      markers: false,
     },
     yPercent: 50,
     ease: "power1.out",
@@ -103,5 +103,21 @@ document.addEventListener("DOMContentLoaded", function () {
       autoAlpha: 0,
       stagger: 1,
     });
+  });
+
+  // CAROUSEL
+
+  const carousel = document.querySelector(".custom__box__carousel");
+
+  gsap.from(carousel, {
+    scrollTrigger: {
+      trigger: carousel,
+      start: "top top+=20%",
+      endTrigger: "footer",
+      end: "top top+=10%", // Vous pouvez ajuster ceci en fonction de la durée de l'effet que vous désirez
+      toggleActions: "play none none reverse",
+      pin: true,
+      markers: false,
+    },
   });
 });

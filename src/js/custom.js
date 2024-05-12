@@ -6,16 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     ".custom__box__carousel__progress"
   );
 
-  // Initialize progress indicators
+  let maxImg = 3;
   function setupProgressIndicators() {
-    lines.forEach((line) => {
-      const numImages = line.children.length - 3;
-      for (let i = 0; i < numImages; i++) {
-        let progressIndicator = document.createElement("div");
-        progressIndicator.style.opacity = 0.5; // Default opacity
-        progressContainer.appendChild(progressIndicator);
-      }
-    });
+    for (let i = 0; i < maxImg; i++) {
+      let progressIndicator = document.createElement("div");
+      progressIndicator.style.opacity = 0.5; // Default opacity
+      progressContainer.appendChild(progressIndicator);
+    }
+
     updateProgressIndicator(0); // Set initial active indicator
   }
 

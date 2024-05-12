@@ -178,7 +178,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 70vh 240px 0 240px;
+  padding: 70vh 10% 0 10%;
   box-sizing: border-box;
   z-index: 5;
 }
@@ -202,7 +202,7 @@ body {
   z-index: 100;
   width: 100%;
   box-sizing: border-box;
-  padding: 38.5px 240px;
+  padding: 38.5px 10%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -815,7 +815,7 @@ header .header-content__line {
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 240px;
+  padding: 0 10%;
   min-height: 100vh;
 }
 .charge__box {
@@ -1149,11 +1149,13 @@ header .header-content__line {
   min-height: 100svh;
   padding-top: 460px;
   background: linear-gradient(to bottom, rgba(239, 241, 253, 0) 0%, #EFF1FD 25%);
+  position: relative;
+  z-index: 3;
 }
 .custom__box {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 240px;
+  padding: 0 10%;
   display: flex;
 }
 .custom__box h2 {
@@ -1398,12 +1400,114 @@ form {
 
 footer {
   background: #30171B;
-  min-height: 100svh;
+  height: 100svh;
 }
 footer .logoFooter {
   position: absolute;
   bottom: -50px;
   left: -15%;
+  z-index: 1;
+}
+footer .footerBox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 75px 10% 58px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+footer .footerBox__main {
+  display: flex;
+  justify-content: flex-end;
+}
+footer .footerBox__main__cart {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+footer .footerBox__main__cart__title {
+  margin-bottom: 48px;
+}
+footer .footerBox__main__cart__title h3 {
+  font-family: "Tartuffo", sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+footer .footerBox__main__cart__title p {
+  color: #816A6C;
+  line-height: 170%;
+  font-size: 15px;
+}
+footer .footerBox__main__cart__recap__line {
+  display: flex;
+  justify-content: space-between;
+  color: #EBE0D8;
+  font-weight: 300;
+  line-height: 125%;
+}
+footer .footerBox__main__cart__recap__line .leftRecap {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+footer .footerBox__main__cart__recap__line .leftRecap span:not(:first-child) {
+  padding-left: 9px;
+  box-sizing: border-box;
+}
+footer .footerBox__main__cart__recap__line img {
+  margin-left: 4px;
+}
+footer .footerBox__credits {
+  color: #816A6C;
+  display: flex;
+  align-items: flex-end;
+}
+footer .footerBox__credits__left {
+  margin-right: 24px;
+}
+footer .footerBox__credits__left__logos {
+  display: flex;
+  align-items: center;
+}
+footer .footerBox__credits__left__logos img:not(:last-child) {
+  margin-right: 10px;
+}
+footer .footerBox__credits__left__logos img {
+  cursor: pointer;
+}
+footer .footerBox__credits__left__title {
+  font-family: "Tartuffo", sans-serif;
+  display: flex;
+}
+footer .footerBox__credits__left__title h2 {
+  white-space: nowrap;
+  font-size: 54px;
+  font-weight: 400;
+}
+footer .footerBox__credits__left__title div {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  transform: translateY(-4px);
+  margin-left: 5px;
+}
+footer .footerBox__credits__right p {
+  font-size: 11px;
+  color: #816A6C;
+}
+
+.footerBox__main__cart__recap__line:nth-child(1), .footerBox__main__cart__recap__line:nth-child(2), .footerBox__main__cart__recap__line:nth-child(3) {
+  margin-bottom: 24px;
+}
+
+.footerBox__main__cart__recap__line:nth-child(5) {
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
