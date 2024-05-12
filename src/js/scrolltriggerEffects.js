@@ -72,21 +72,18 @@ document.addEventListener("DOMContentLoaded", function () {
     duration: 1,
     autoAlpha: 0,
     rotateY: 360,
-    onComplete: () => {
-      gsap.to(reflet, {
-        x: "150%",
-        duration: 2,
-        ease: CustomEase.create(
-          "custom",
-          "M0,0 C0.237,0.059 0.22,0.104 0.322,0.518 0.448,1.034 0.563,0.868 1,1 "
-        ),
-        repeat: -1,
-        repeatDelay: 5,
-        delay: 1,
-      });
-    },
   });
-
+  gsap.to(reflet, {
+    x: "150%",
+    duration: 2,
+    ease: CustomEase.create(
+      "custom",
+      "M0,0 C0.237,0.059 0.22,0.104 0.322,0.518 0.448,1.034 0.563,0.868 1,1 "
+    ),
+    repeat: -1,
+    repeatDelay: 5,
+    delay: 1,
+  });
   // EGERIES
 
   const egeries = document.querySelectorAll(".egeries__box__streamers__card");

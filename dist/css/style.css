@@ -1141,4 +1141,269 @@ header .header-content__line {
   font-family: "Tartuffo", sans-serif;
 }
 
+.custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100svh;
+  padding-top: 460px;
+  background: linear-gradient(to bottom, rgba(239, 241, 253, 0) 0%, #EFF1FD 25%);
+}
+.custom__box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 240px;
+  display: flex;
+}
+.custom__box h2 {
+  font-family: "Tartuffo", sans-serif;
+  color: #30171B;
+  font-size: 40px;
+  font-weight: 400;
+}
+.custom__box__carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 60vw;
+  height: 55svh;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.custom__box__carousel__line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.custom__box__carousel__line img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.custom__box__carousel__arrow {
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.custom__box__carousel__progress {
+  position: absolute;
+  z-index: 3;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.custom__box__carousel__progress div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #30171B;
+  margin-right: 8px;
+  opacity: 0.25;
+  transition: opacity 0.4s ease-in-out;
+}
+.custom__box__carousel__progress div:not(:last-child) {
+  margin-right: 4px;
+}
+.custom__box__panel {
+  margin-left: 88px;
+}
+.custom__box__panel__title {
+  margin-bottom: 120px;
+}
+.custom__box__panel__title h2 {
+  font-size: 64px;
+  margin-bottom: 32px;
+}
+.custom__box__panel__title p {
+  line-height: 170%;
+  font-size: 15px;
+  color: #816A6C;
+}
+.custom__box__panel__finition, .custom__box__panel .custom__box__panel__ornement {
+  margin-bottom: 120px;
+}
+.custom__box__panel__finition p, .custom__box__panel .custom__box__panel__ornement p {
+  margin: 24px 0;
+  color: #816A6C;
+}
+.custom__box__panel__pack h2 {
+  margin-bottom: 24px;
+}
+.custom__box__panel__pack p {
+  color: #816A6C;
+}
+.custom__box__panel__pack__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  max-width: 392px;
+  padding: 24px;
+  cursor: pointer;
+}
+.custom__box__panel__pack__item h3 {
+  color: #5D4043;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.custom__box__panel__pack__item p {
+  color: #5D4043;
+  font-size: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 11px;
+  opacity: 0.75;
+  margin-right: 8px;
+}
+
+.activePack {
+  border-color: rgba(48, 23, 27, 0.5058823529);
+}
+.activePack h3 {
+  color: #30171B;
+}
+.activePack p {
+  color: #30171B;
+}
+.activePack .pricePack span {
+  color: #30171B;
+}
+
+#arrowRight {
+  transform: rotate(180deg);
+  margin-right: 16px;
+}
+
+#arrowLeft {
+  margin-left: 16px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hide the default radio input */
+.radio-option input[type=radio] {
+  display: none;
+}
+
+.radio-option .checkmark {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  position: relative;
+  cursor: pointer;
+  /* Transparent border by default */
+  transition: all 0.3s ease; /* Smooth transition for color and border changes */
+}
+
+.radio-option input[type=radio]:checked + .checkmark {
+  box-shadow: inset 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.radio-option input[type=radio]:hover + .checkmark {
+  box-shadow: inset 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Styling the label text adjacent to the checkmark */
+.radio-option {
+  margin-right: 15px;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  font-size: 16px; /* Label font size */
+  color: #333; /* Text color */
+  box-sizing: border-box;
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.radio-option.selected {
+  border-color: black; /* Set the border color to black when selected */
+}
+
+/* Hover effect on the checkmark */
+.radio-option:hover .checkmark {
+  opacity: 0.9; /* Slight opacity change on hover */
+}
+
+/* Focus-visible for accessibility: outlines the checkmark when focused via keyboard */
+.radio-option input[type=radio]:focus-visible + .checkmark {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.75); /* Blue shadow to indicate focus */
+}
+
+.radio-option input[type=radio][value=rose] + .checkmark {
+  background: linear-gradient(to bottom right, #FFE7DB, #EECDBF);
+}
+
+/* Style for radio inputs with value 'red' */
+.radio-option input[type=radio][value=bleu] + .checkmark {
+  background: linear-gradient(to bottom right, #DBF2FF, #BFC7EE);
+}
+
+/* Style for radio inputs with value 'green' */
+.radio-option input[type=radio][value=creme] + .checkmark {
+  background: linear-gradient(to bottom right, #F6F6F6, #D8D8D8);
+}
+
+/* Style for radio inputs with value 'yellow' */
+.radio-option input[type=radio][value=gris] + .checkmark {
+  background: linear-gradient(to bottom right, #99969F, #484848);
+}
+
+.radio-option input[type=radio][value=bleuF] + .checkmark {
+  background: #017AD7;
+}
+
+.radio-option input[type=radio][value=vert] + .checkmark {
+  background: #35E1C2;
+}
+
+.radio-option input[type=radio][value=roseF] + .checkmark {
+  background: #FF5EAB;
+}
+
+.radio-option input[type=radio][value=vertF] + .checkmark {
+  background: #2C3C3A;
+}
+
+footer {
+  background: #30171B;
+  min-height: 100svh;
+}
+footer .logoFooter {
+  position: absolute;
+  bottom: -50px;
+  left: -15%;
+}
+
 /*# sourceMappingURL=style.css.map */

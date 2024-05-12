@@ -1,6 +1,7 @@
 import "./hoverEffects.js";
 import "./scrolltriggerEffects.js";
 import "./pods.js";
+import "./custom.js";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
