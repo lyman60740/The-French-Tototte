@@ -27,6 +27,32 @@ module.exports = {
           "sass-loader", // Compile Sass en CSS
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]", // Conserve le chemin et le nom d'origine
+              outputPath: "assets/", // Dossier de sortie dans dist/
+              publicPath: "assets/", // Chemin public pour le HTML
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              outputPath: "fonts/",
+              publicPath: "fonts/",
+            },
+          },
+        ],
+      },
     ],
   },
 };
