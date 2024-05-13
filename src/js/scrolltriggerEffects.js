@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       scrub: true,
       markers: false,
     },
-    rotate: "20deg",
+    rotate: "30deg",
     ease: "none",
   });
 
@@ -119,5 +119,26 @@ document.addEventListener("DOMContentLoaded", function () {
       pin: true,
       markers: false,
     },
+  });
+
+  //CONTRASTE NAVBAR
+
+  const navbarEl = document.querySelectorAll(
+    ".navBar__logo svg path, .header-content__title h1, .header-content__title div"
+  );
+  const navBar = document.querySelector(".navBar");
+
+  gsap.to(navbarEl, {
+    scrollTrigger: {
+      trigger: "footer",
+      start: "top top+=10%",
+      end: "top top",
+      toggleActions: "play none none reverse",
+      scrub: true,
+      markers: false,
+    },
+    fill: "white",
+    color: "#fff",
+    ease: "none",
   });
 });

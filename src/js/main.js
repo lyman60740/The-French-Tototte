@@ -16,4 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     smooth: 2,
     effects: true,
   });
+
+  if (window.innerWidth < 1200) {
+    document.querySelectorAll(".navBar, #smooth-wrapper").forEach((el) => {
+      gsap.set(el, { autoAlpha: 0 });
+    });
+    gsap.set(".avertissementResponsive", { autoAlpha: 1 });
+  }
 });

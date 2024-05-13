@@ -701,6 +701,14 @@ header .header-content__line {
   flex-direction: column;
   align-items: center;
   width: max-content;
+  position: relative;
+}
+.pods__box__surface {
+  position: absolute;
+  width: 80%;
+  height: 100px;
+  background: radial-gradient(53.35% 53.35% at 50% 0, #d3bfb0 0, hsla(25, 32%, 88%, 0) 100%);
+  top: 40%;
 }
 .pods__box__list {
   display: flex;
@@ -987,6 +995,7 @@ header .header-content__line {
 }
 .mynthos__box {
   width: 30vw;
+  min-width: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1076,6 +1085,7 @@ header .header-content__line {
   justify-content: center;
   width: 100%;
   min-height: 100svh;
+  margin-top: 132px;
 }
 .egeries__box {
   width: 60%;
@@ -1088,6 +1098,7 @@ header .header-content__line {
   flex-direction: column;
   align-items: center;
   width: 40%;
+  min-width: 385px;
 }
 .egeries__box__title h2 {
   font-family: "Tartuffo", sans-serif;
@@ -1151,6 +1162,7 @@ header .header-content__line {
   background: linear-gradient(to bottom, rgba(239, 241, 253, 0) 0%, #EFF1FD 25%);
   position: relative;
   z-index: 3;
+  padding-bottom: 180px;
 }
 .custom__box {
   width: 100%;
@@ -1508,6 +1520,41 @@ footer .footerBox__credits__right p {
 .footerBox__main__cart__recap__line:nth-child(5) {
   margin-top: 48px;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1500px) {
+  .spotify__box {
+    width: 60vw;
+  }
+  .mynthos__box {
+    width: 40vw;
+  }
+  .egeries__box {
+    width: 80%;
+  }
+  .egeries__box__streamers {
+    height: 85vh;
+    margin-top: 110px;
+  }
+}
+.avertissementResponsive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+}
+.avertissementResponsive p {
+  max-width: 50%;
+  font-size: 2vw;
+  text-align: center;
+  line-height: 150%;
+  color: #30171B;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -608,6 +608,14 @@ header {
     flex-direction: column;
     align-items: center;
     width: max-content;
+    position: relative;
+    &__surface {
+      position: absolute;
+      width: 80%;
+      height: 100px;
+      background: radial-gradient(53.35% 53.35% at 50% 0, #d3bfb0 0, hsla(25, 32%, 88%, 0) 100%);
+      top: 40%;
+    }
     &__list {
       display: flex;
       &__item {
@@ -905,6 +913,7 @@ header {
   min-height: 100svh;
   &__box {
     width: 30vw;
+    min-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -998,6 +1007,7 @@ header {
   justify-content: center;
   width: 100%;
   min-height: 100svh;
+  margin-top: 132px;
   &__box {
     width: 60%;
     display: flex;
@@ -1008,6 +1018,7 @@ header {
       flex-direction: column;
       align-items: center;
       width: 40%;
+      min-width: 385px;
       & h2 {
         font-family: "Tartuffo", sans-serif;
         color: #30171B;
@@ -1077,6 +1088,7 @@ header {
   background: linear-gradient(to bottom, #eff1fd00 0%, #EFF1FD 25%);
   position: relative;
   z-index: 3;
+  padding-bottom: 180px;
   &__box {
     width: 100%;
     box-sizing: border-box;
@@ -1443,4 +1455,40 @@ footer {
 .footerBox__main__cart__recap__line:nth-child(5) {
   margin-top: 48px;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 1500px) {
+  .spotify__box {
+    width: 60vw;
+}
+.mynthos__box {
+  width: 40vw;
+}
+.egeries__box {
+  width: 80%;
+  &__streamers {
+    height: 85vh;
+    margin-top: 110px;
+  }
+}
+}
+
+.avertissementResponsive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+  & p {
+    max-width: 50%;
+    font-size: 2vw;
+    text-align: center;
+    line-height: 150%;
+    color: #30171B;
+  }
 }
